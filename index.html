@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevMovies</title>
+
+<link rel="stylesheet" href="./Assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1 class="logo" onclick="voltarInicio()">DevMovies</h1>
+
+    <nav>
+        <button onclick="filtrar('movie')">Filmes <i class="fa-solid fa-film"></i></button>
+        <button onclick="filtrar('tv')">Séries <i class="fa-solid fa-tv"></i></button>
+        <button onclick="mostrarFavoritos()">Favoritos <i class="fa-solid fa-heart"></i></button>
+    </nav>
+</header>
+
+<div class="spacer"></div>
+
+<div class="search-box">
+    <input type="text" id="pesquisa" placeholder="Buscar filmes...">
+    <button onclick="buscarFilme(document.getElementById('pesquisa').value)">Buscar</button>
+</div>
+
+<h2 class="secao">Populares</h2>
+
+<div class="carrossel-container">
+    <button class="seta esquerda" onclick="scrollCarrossel(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div id="carrossel" class="carrossel"></div>
+
+    <button class="seta direita" onclick="scrollCarrossel(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+<h2 class="secao">Resultados</h2>
+<div id="resultado" class="grid"></div>
+
+<footer>
+    <p>&copy; David Alves 2026</p>
+</footer>
+
+<script src="./Assets/js/script.js"></script>
+
+</body>
+</html>
